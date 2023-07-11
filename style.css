@@ -1,0 +1,166 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+}
+
+body{
+    background-color:#FFFFFF;
+    color: #323238;
+    font-weight: 500;
+    font-size: 1.6rem; 
+    font-family: 'Roboto', sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 19rem;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hide{
+  display: none;
+}
+
+.light-theme, .dark-theme  {
+  position:absolute;
+    top: 3rem;
+    right: 5rem;
+  
+    /*position: fixed;
+      top: 10px;
+      right: 10px;
+      transform: translate(50%, -50%);
+    */
+}
+
+#timer {
+    font-size: 13rem;
+    display: flex;
+    margin-bottom: 1.7rem;
+}
+
+#controls_left{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+aside{
+    display: flex;
+    gap: 3rem;
+}
+
+.card-forest, .card-rain, .card-fireplace, .card-coffee-shop {
+    display: flex;
+    flex-direction: column;
+
+    width: 13.8rem;
+    height: 15.2rem;
+    text-align: center;
+    background-color: #E1E1E6;
+    border-radius: 2rem;
+    margin-bottom: 3rem;
+}
+
+aside button svg{
+  margin-top: 3rem;
+}
+
+aside button svg path{
+  fill: #323238;
+}
+
+
+aside div.active button{
+  background-color:#02799D;
+}
+
+aside div.active button svg path {
+    fill: #fff;
+}
+
+input {
+    -webkit-appearance: none;
+    background: #323238;
+    outline: none;
+    width: 10rem;
+    height: .4rem;
+    border-radius: 9rem;   
+
+    position: absolute;
+    z-index: 1;
+    margin: 11rem 0 0 1.9rem;
+    overflow: 1.6rem;
+}
+
+input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%; 
+
+    background: #323238;
+    cursor: pointer;
+}
+
+input::-moz-range-thumb {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%; 
+
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+aside div.active input,
+aside div.active input::-webkit-slider-thumb {
+  background-color: #fff;
+}
+
+
+/*thema DARK*/
+.dark {
+  background-color: #000000; 
+  color: #fff; 
+  transition: background-color .5s ease;
+}
+
+.dark #controls_left button svg path{
+  fill: #C4C4CC;
+}
+
+.dark .card-forest,.dark .card-rain,.dark .card-fireplace,.dark .card-coffee-shop {
+  background-color: #29292E;
+  transition: background .5s ease;
+}
+
+.dark aside button svg path{
+  fill: #C4C4CC;
+}
+
+.dark aside div.active button{
+  background-color:#0A3442;
+}
+
+.dark aside div.active button svg path{
+  fill: #fff;
+}
+
+.dark input, .dark input::-webkit-slider-thumb{
+  background-color: #FFF;
+}
+
+
