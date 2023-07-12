@@ -49,6 +49,7 @@ function countdown() {
     updateDisplay(minutes, 0);
 
     if (isFinished) {
+      resetControls();
       updateDisplay();
       Sounds().timeEnd();
       return;
