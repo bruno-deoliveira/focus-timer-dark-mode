@@ -153,3 +153,21 @@ aside div.active input::-webkit-slider-thumb {
 .dark aside div.active button svg path{
   fill: #fff;
 }
+
+@media (max-width: 768px){
+
+  body {
+    /* Modify the styles for smaller screens */
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  aside {
+    /* Modify the styles for smaller screens */
+    grid-template-areas:
+      "forest rain" 
+      "coffee-shop fireplace";
+    grid-gap: 2rem;
+  }
+}
