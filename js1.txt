@@ -1,0 +1,208 @@
+/*MODO BUTTONS DARK ATIVAR E DESATIVAR*/
+const buttonLight = document.querySelector(".light-theme");
+const buttonDark = document.querySelector(".dark-theme");
+const dark = document.querySelector(".dark");
+
+buttonLight.addEventListener("click", function () {
+  buttonLight.classList.add("hide");
+  buttonDark.classList.remove("hide");
+  document.body.classList.add("dark")
+
+  pressButton();
+});
+
+buttonDark.addEventListener("click",function(){
+  buttonDark.classList.add("hide")
+  buttonLight.classList.remove("hide")
+  document.body.classList.remove("dark");
+
+  pressButton();
+});
+
+
+/*MODO BUTTONS PLAY PAUSE E STOP + -*/
+const buttonPlay = document.querySelector(".play");
+const buttonPause = document.querySelector(".pause");
+const buttonStop = document.querySelector(".stop");
+
+const buttonPlus = document.querySelector(".plus");
+const buttonMinus = document.querySelector(".minus");
+
+const minutesDisplay = document.querySelector(".minutes");
+const secondsDisplay = document.querySelector(".seconds");
+
+let minutes = Number(minutesDisplay.textContent);
+let timerTimeOut;
+
+function updateDisplay(minutes, seconds) {
+  minutesDisplay.textContent = String(minutes).padStart(2, "0");
+  secondsDisplay.textContent = String(seconds).padStart(2, "0");
+}
+
+function reset() {
+  updateDisplay(minutes, 0);
+  clearTimeout(timerTimeOut);
+}
+
+function countdown() {
+  timerTimeOut = setTimeout(function () {
+    let seconds = Number(secondsDisplay.textContent);
+    let minutes = Number(minutesDisplay.textContent);
+    let isFinished = minutes <= 0 && seconds <= 0;
+
+    updateDisplay(minutes, 0);
+
+    if (isFinished) {
+      timeEnd();
+      resetControls();
+      updateDisplay();
+      
+      return;
+    }
+    if (seconds <= 0) {
+      seconds = 60;
+      --minutes;
+    }
+
+    updateDisplay(minutes, String(seconds - 1));
+
+    countdown();
+  }, 1000);
+}
+
+function hold() {
+  clearTimeout(timerTimeOut);
+}
+
+buttonPlay.addEventListener("click", function () {
+  buttonPlay.classList.add("hide");
+  buttonPause.classList.remove("hide");
+  countdown();
+
+  pressButton();
+});
+
+buttonPause.addEventListener("click", function () {
+  buttonPause.classList.add("hide");
+  buttonPlay.classList.remove("hide");
+  hold();
+
+  pressButton();
+});
+
+buttonStop.addEventListener("click", function () {
+  buttonPause.classList.add("hide");
+  buttonPlay.classList.remove("hide");
+  reset();
+
+  pressButton();
+});
+
+buttonPlus.addEventListener("click", function () {
+  minutes++; // Incrementa os minutos
+  updateDisplay(minutes, 0); // Atualiza a exibição
+
+  pressButton();
+});
+
+buttonMinus.addEventListener("click", function () {
+  if (minutes > 0) {
+    minutes--; // Decrementa os minutos apenas se for maior que zero
+    updateDisplay(minutes, 0); // Atualiza a exibição
+
+    pressButton();
+  }
+});
+
+
+/*MODO BUTTONS SOUND*/
+const buttonSoundForest = document.querySelector(".card-forest");
+const buttonSoundRain = document.querySelector(".card-rain");
+const buttonSoundCoffeeShop = document.querySelector(".card-coffee-shop");
+const buttonSoundFireplace = document.querySelector(".card-fireplace");
+
+const buttonPressAudio = new Audio(
+  "https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true"
+);
+const kitchenTimer = new Audio("./sound/audios_kichen-timer.mp3");
+const bgAudioForest = new Audio("./sound/Floresta.wav");
+const bgAudioRain = new Audio("./sound/Chuva.wav");
+const bgAudioCoffeeShop = new Audio("./sound/Cafeteria.wav");
+const bgAudioFireplace = new Audio("./sound/Lareira.wav");
+
+buttonSoundForest.addEventListener("click", function () {
+  buttonSoundForest.classList.toggle("active");
+  playSoundForest();
+});
+
+buttonSoundRain.addEventListener("click", function () {
+  playSoundRain();
+  buttonSoundRain.classList.toggle("active");
+});
+
+buttonSoundCoffeeShop.addEventListener("click", function () {
+  playSoundCoffeeShop();
+  buttonSoundCoffeeShop.classList.contains("active")
+    ? buttonSoundCoffeeShop.classList.remove("active")
+    : buttonSoundCoffeeShop.classList.add("active");
+});
+
+buttonSoundFireplace.addEventListener("click", function () {
+  playSoundFireplace();
+  buttonSoundFireplace.classList.contains("active")
+    ? buttonSoundFireplace.classList.remove("active")
+    : buttonSoundFireplace.classList.add("active");
+});
+
+function playSoundForest() {
+  if (buttonSoundForest.classList.contains("active")) {
+    // Reproduzir o som da floresta
+    bgAudioForest.play();
+  } else {
+    // Parar o som da floresta
+    bgAudioForest.pause();
+    bgAudioForest.currentTime = 0;
+  }
+}
+
+function playSoundRain() {
+  if (buttonSoundRain.classList.contains("active")) {
+    // Reproduzir o som da floresta
+    bgAudioRain.pause();
+  } else {
+    // Parar o som da floresta
+    bgAudioRain.play();
+    bgAudioRain.currentTime = 0;
+  }
+}
+
+function playSoundCoffeeShop() {
+  buttonSoundCoffeeShop.classList.contains("active")
+    ? bgAudioCoffeeShop.pause()
+    : bgAudioCoffeeShop.play();
+}
+
+function playSoundFireplace() {
+  buttonSoundFireplace.classList.contains("active")
+    ? bgAudioFireplace.pause()
+    : bgAudioFireplace.play();
+}
+
+function pressButton() {
+  buttonPressAudio.play();
+}
+
+function timeEnd() {
+  kitchenTimer.play();
+}
+
+bgAudioForest.loop = true;
+bgAudioRain.loop = true;
+bgAudioCoffeeShop.loop = true;
+bgAudioFireplace.loop = true;
+
+
+
+
+
+
