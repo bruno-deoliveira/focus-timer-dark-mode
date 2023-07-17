@@ -7,16 +7,14 @@
 
 
 ## 💻 Projeto
-O FocusTimer é um temporizador estilo pomodoro que permite que você gerencie seu tempo e aumente sua produtividade. Ele ajuda você a dividir seu trabalho em períodos de tempo focados e pausas, seguindo a técnica do pomodoro.
+Este é um projeto de temporizador estilo pomodoro desenvolvido em HTML, CSS e JavaScript. O temporizador é projetado para ajudar no gerenciamento do tempo, utilizando a técnica pomodoro que alterna períodos de trabalho intenso com pequenas pausas.
 
 ## 💡Características
-- Temporizador de 25 minutos para sessões de trabalho (pomodoros).
-- Pausa curta de 5 minutos após cada pomodoro concluído.
-- Pausa longa de 15 minutos a cada 4 pomodoros concluídos.
-- Botões para iniciar, pausar e parar o temporizador.
-- Opção para ajustar a duração dos pomodoros e pausas.
-- Temas claro e escuro para melhorar a legibilidade.
-- Opção para ativar/desativar sons de ambiente para aprimorar o foco.
+- Contagem regressiva do tempo em minutos e segundos.
+- Botão para iniciar, pausar e parar o temporizador.
+- Botões para aumentar e diminuir o tempo do temporizador.
+- Alternância entre os modos "dark" e "light".
+- Botão para controlar o som do temporizador.
 
 ## 🚀 Tecnologias Utilizadas:
 <div>
@@ -26,7 +24,7 @@ O FocusTimer é um temporizador estilo pomodoro que permite que você gerencie s
 </div>
 
 ## 🔖 Layout
-Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/pwWmRnoKEx6m1tK7dsW5Je/Stage-05---Focus-Timer-2.0-(Copy)?type=design&node-id=0-1&mode=design&t=3yylid0MaPqyiSfa-0). É necessário ter conta no Figma para acessá-lo.
+Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/7KsiYrXCzc0qbFfWvZ9a9q/Stage-05---Dark-Mode-FocusTimer-(Copy)?type=design&node-id=0-1&mode=design&t=iSBsJGCQlaTRKEU9-0). É necessário ter conta no Figma para acessá-lo.
 
 ## 💾 Iniciar Projeto
 Live server com VScode ou apenas clonar pasta e acessar o index.html
@@ -38,8 +36,8 @@ Live server com VScode ou apenas clonar pasta e acessar o index.html
 <h5> Clone o projeto e acesso a pasta. </h5>
 
 ```
-$ git clone https://github.com/bruno-deoliveira/focus-timer-2.0.git
-$ cd focus-timer-2.0
+$ git clone https://github.com/bruno-deoliveira/focus-timer-dark-mode.git
+$ cd focus-timer-dark-mode
 ```
 
 ## 🔧 Contribuição
@@ -55,61 +53,6 @@ Esse projeto está sob a licença [MIT](). Veja o arquivo LICENSE para mais deta
 <h3 align="center">Developed by Bruno Oliveira ☕</h3>
 
 
-
-
-__________________________________________________________________________________________________________________________________________________________
-<h1 align="center"> 🛋 Moveis Customizados </h1>
-<h4 align="center"> Status: 🚀 Finished </h4>
-
-<p align="center">
-  <img src="https://github.com/bruno-deoliveira/moveis_customizados/assets/109918729/5353ec34-b315-4bff-9ef1-d831d2116826"
-</p>
-
-## 💻 Projeto
-Projeto 02 do modulo Introdução ao HTML e CSS - Explore Rocketseat
-Projeto 03 do modulo Avançado no HTML e CSS - Explore Rocketseat
-
-Nesse desafio, foi recriado uma aplicação, a partir de um layout pronto no Figma, para fortalecer alguns conceitos aprendidos:
-Nesse desafio, foi recriado uma aplicação com formulario, validações e customizações, a partir de um layout pronto no Figma, para fortalecer alguns conceitos aprendidos:
-- Estruturação do projeto HTML;
-- Uso de tags HTML mais comuns;
-- Conceitos iniciais de CSS;
-- Posicionamento e alinhamento de elementos na tela;
-- Aplicando fontes customizadas;
-- Espaçamentos.
-
-## 🚀 Tecnologias Utilizadas:
-<div>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
-</div>
-
-## 🔖 Layout
-Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/fAvYZz4dPV5MfhL77XkqkD/Explorer---Projeto-01?type=design&t=GH6hUnTrrz3EpL4F-0). É necessário ter conta no Figma para acessá-lo.
-
-## 💾 Iniciar Projeto
-Live server com VScode ou apenas clonar pasta e acessar o index.html
-<h5> Programas necessários para iniciar projeto </h5>
-
-- [Live Server (Opcional)](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-- [Visual Studio Code - Vscode](https://code.visualstudio.com/)
-
-<h5> Clone o projeto e acesso a pasta. </h5>
-
-```
-$ git clone https://github.com/bruno-deoliveira/moveis_customizados.git
-$ cd moveis_customizados
-```
-## 📝 Licença
-Esse projeto está sob a licença [MIT](). Veja o arquivo LICENSE para mais detalhes.
-
-## 📞 Suporte
-Para suporte, mande um e-mail para brunoalmeida0805@gmail.com Grato!
-
-## 🔎 My LinkedIn 
-<a href="https://www.linkedin.com/in/bruno-almeida-deoliveira"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-
-<h3 align="center">Developed by Bruno Oliveira ☕</h3>
 
 
 
