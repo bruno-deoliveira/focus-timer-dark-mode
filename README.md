@@ -45,7 +45,7 @@ Contribuições são bem-vindas! Se você tiver alguma sugestão, melhoria ou en
 
 
 ## 📝 Licença
-Esse projeto está sob a licença [MIT](). Veja o arquivo LICENSE para mais detalhes.
+Esse projeto está sob a licença [MIT](https://github.com/bruno-deoliveira/focus-timer-dark-mode/blob/main/LICENSE). Veja o arquivo LICENSE para mais detalhes.
 
 ## 🔎 My LinkedIn 
 <a href="https://www.linkedin.com/in/bruno-almeida-deoliveira"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
